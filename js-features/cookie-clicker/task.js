@@ -6,7 +6,7 @@ let start = Date.now();
 cookie.onclick = function () {
 	let end = Date.now();
 	let elapsed = end - start;
-	console.log(elapsed);
+	start = Date.now();
 
 	count.textContent++;
 	clickSpeed.textContent = (1 / (elapsed / 1000)).toFixed(2);
