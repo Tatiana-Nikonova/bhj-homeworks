@@ -18,7 +18,8 @@ for (let index = 1; index < 10; index++) {
 				lost.textContent++;
 				if (lost.textContent === '5') {
 					alert("Вы проиграли!");
-					location.reload(true);
+					dead.textContent = 0;
+					lost.textContent = 0;
 				};
 
 			};
@@ -28,7 +29,8 @@ for (let index = 1; index < 10; index++) {
 				dead.textContent++;
 				if (dead.textContent === '10') {
 					alert("Вы выйграли!");
-					location.reload(true);
+					dead.textContent = 0;
+					lost.textContent = 0;
 				};
 			};
 		};
