@@ -15,6 +15,7 @@ for (let modalClose of modalCloses) {
 for (let showSucces of showSuccess) {
 	showSucces.onclick = function () {
 		modalSuccess.className += " modal_active";
+		modalMain.className = "modal";
 	};
 };
 
