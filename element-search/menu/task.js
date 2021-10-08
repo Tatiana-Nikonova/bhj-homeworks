@@ -13,11 +13,11 @@ for (let menuLink of menuLinks) {
 		if (menuSub !== null && activeMenuItem !== null && menuSub === activeMenuItem) {
 			menuSub.classList.remove("menu_active");
 			return false;
-		}
+		};
 
 		if (activeMenuItem && activeMenuItem !== null) {
 			activeMenuItem.classList.remove("menu_active");
-		}
+		};
 		menuSub.classList.toggle("menu_active");
 
 		return false;
