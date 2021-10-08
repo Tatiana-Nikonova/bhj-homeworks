@@ -20,7 +20,7 @@ for (let value of dropValue) {
 	};
 };
 
-
+// ошибка, не меняется значение
 for (let link of links) {
 	let linkItem = link.closest(".dropdown__item");
 	linkItem.onclick = () => {
