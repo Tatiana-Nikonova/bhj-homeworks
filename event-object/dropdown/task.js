@@ -18,15 +18,18 @@ for (let value of dropValue) {
 			return false;
 		};
 	};
-};
 
-// ошибка, не меняется значение
-for (let link of links) {
-	let linkItem = link.closest(".dropdown__item");
-	linkItem.onclick = () => {
-		const list = linkItem.closest(".dropdown__list");
-		list.classList.remove("dropdown__list_active");
-		dropValue.textContent = link.textContent;
-		return false;
+	for (let link of links) {
+
+		link.onclick = () => {
+			const newList = link.closest(".dropdown__list");
+			const contentDropdown = link.closest(".dropdown");
+			const contentValue = contentDropdown.querySelector(".dropdown > .dropdown__value");
+			newList.classList.remove("dropdown__list_active");
+			contentValue.textContent = link.textContent;
+			return false;
+		};
+
 	};
+
 };
