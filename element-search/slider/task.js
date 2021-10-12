@@ -12,10 +12,6 @@ const activeSlide = n => {
 	slider[n].classList.add("slider__item_active");
 };
 
-
-
-
-
 const getCurrentSlide = function (idx) {
 	activeSlide(idx);
 	dotActive(idx);
