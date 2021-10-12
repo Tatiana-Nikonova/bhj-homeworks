@@ -1,7 +1,5 @@
 const rotators = document.querySelectorAll(".rotator__case");
 
-
-
 function showRotator() {
 	for (let i = 0; i < rotators.length; i++) {
 
@@ -17,10 +15,7 @@ function showRotator() {
 		} else {
 			next.classList.add("rotator__case_active");
 		};
-
 	};
-
-
 };
 
 setInterval(showRotator, 1000);
