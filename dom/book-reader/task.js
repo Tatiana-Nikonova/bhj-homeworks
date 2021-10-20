@@ -10,7 +10,7 @@ for (let color of colors) {
 		if (attribute) {
 			for (let item of colors) {
 				if (item.getAttribute("data-text-color")) item.classList.remove("color_active");
-			}
+			};
 			color.classList.add("color_active");
 			if (attribute === 'whitesmoke') {
 				content.classList.remove("book_color-black");
@@ -24,7 +24,7 @@ for (let color of colors) {
 				content.classList.remove("book_color-black");
 				content.classList.remove("book_color-whitesmoke");
 				content.classList.add("book_color-gray");
-			}
+			};
 		} else {
 			let attribute = color.getAttribute("data-bg-color");
 			if (attribute) {
@@ -44,13 +44,13 @@ for (let color of colors) {
 					content.classList.remove("bg_color_white");
 					content.classList.remove("bg_color_black");
 					content.classList.add("bg_color_gray");
-				}
+				};
 
-			}
-		}
+			};
+		};
 		return false;
-	}
-}
+	};
+};
 
 for (let item of items) {
 	item.onclick = () => {
@@ -69,12 +69,12 @@ for (let item of items) {
 			item.classList.add(active);
 			book.classList.remove("font-size_big");
 			book.classList.remove("font-size_small");
-		}
+		};
 		return false;
-	}
-}
+	};
+};
 
 function deleteClass() {
 	let element = document.querySelector(".font-size_active");
 	element.classList.remove("font-size_active");
-}
+};
