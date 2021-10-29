@@ -9,3 +9,37 @@ body {
 .poll__title {
   margin-bottom: 20px;
 }
+.main {
+	position: relative;
+}
+.modal {
+	display: none;
+	min-height: 200px;
+	min-width: 400px;
+	margin: 0;
+	padding: 20px;
+	position: absolute;
+	top: 22%;
+	left: 45%;
+	transform: translate(-50%, -50%);
+	background: rgba(128, 128, 128, 0.8);
+	border-radius: 5px;
+ }
+ 
+ .modal_active {
+	display: flex;
+	top: 60%;
+ }
+ 
+ .voice {
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	height: 30%;
+ }
+ 
+ .close_button {
+	position: absolute;
+	top: 75%;
+	left: 75%;
+ }
