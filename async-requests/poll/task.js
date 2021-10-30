@@ -19,10 +19,15 @@ xhr.addEventListener('load', () => {
 			answer.appendChild(btn);
 			btn.onclick = () => {
 				modal.classList.add("modal_active");
+				let vote = question;
+				let formData = new FormData(vote);
 				xhr.open("POST", url, true);
-				xhr.append('ContentType: application / x - www - form - urlencoded');
-				xhr.send();
-				// Запуталась с votes...
+				xhr.setRequestHeader('Content-type', 'application / x - www - form - urlencoded');
+				xhr.send(formData);
+
+				// Запуталась с votes...??? vote=id_опроса&answer=индекс_ответа_в_массиве_ответов
+				//Как это написать не знаю
+
 			};
 		};
 	};
