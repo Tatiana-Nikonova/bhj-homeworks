@@ -21,11 +21,13 @@ xhr.addEventListener('load', () => {
 				modal.classList.add("modal_active");
 
 				btnClose.onclick = () => {
-					let formData = new FormData(btn);
-					let request = new XMLHttpRequest(formData);
+					let formData = new FormData(btnClose);
+					formData.append('vote', '1');
+					formData.append('answer', '0');
+					let request = new XMLHttpRequest();
 					request.open("POST", url, true);
 					request.setRequestHeader('Content-type', 'application / x - www - form - urlencoded');
-					request.send('vote=1&answer=2');
+					request.send(formData);
 
 				};
 			};
