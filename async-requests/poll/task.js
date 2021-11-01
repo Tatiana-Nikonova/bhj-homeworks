@@ -19,14 +19,15 @@ xhr.addEventListener('load', () => {
 			answer.appendChild(btn);
 			btn.onclick = () => {
 				modal.classList.add("modal_active");
-				let formData = new FormData(btn);
-				let request = new XMLHttpRequest();
-				request.open("POST", url, true);
-				request.setRequestHeader('Content-type', 'application / x - www - form - urlencoded');
-				request.send(formData);
 
+				btnClose.onclick = () => {
+					let formData = new FormData(btn);
+					let request = new XMLHttpRequest(formData);
+					request.open("POST", url, true);
+					request.setRequestHeader('Content-type', 'application / x - www - form - urlencoded');
+					request.send('vote=1&answer=2');
 
-
+				};
 			};
 		};
 	};
