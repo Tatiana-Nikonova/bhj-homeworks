@@ -20,16 +20,6 @@ xhr.addEventListener('load', () => {
 			btn.onclick = () => {
 				modal.classList.add("modal_active");
 
-				btnClose.onclick = () => {
-					let formData = new FormData(btnClose);
-					formData.append('vote', '1');
-					formData.append('answer', '0');
-					let request = new XMLHttpRequest();
-					request.open("POST", url, true);
-					request.setRequestHeader('Content-type', 'application / x - www - form - urlencoded');
-					request.send(formData);
-
-				};
 			};
 		};
 	};
@@ -37,6 +27,11 @@ xhr.addEventListener('load', () => {
 
 xhr.send();
 
-btnClose.addEventListener('click', () => {
+btnClose.onclick = () => {
 	modal.classList.remove("modal_active");
-});
+
+	let request = new XMLHttpRequest();
+	request.open("POST", url, true);
+	request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+	request.send(`vote=1&answer=0`);
+};
