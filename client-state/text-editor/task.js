@@ -13,4 +13,5 @@ window.addEventListener('beforeunload', (event) => {
 
 clearButton.onclick = () => {
 	localStorage.removeItem('text');
+	editor.value = "";
 };
